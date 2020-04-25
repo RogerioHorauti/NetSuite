@@ -1,0 +1,103 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<style type="text/css">
+	.modal {
+	  position: fixed;
+	  padding-top: 280px;
+	  padding-left: 550px;
+	  padding-right: 550px;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  z-index: 1;
+	  display: none;
+	  overflow: hidden;
+	  -webkit-overflow-scrolling: touch;
+	  outline: 0;
+	  background-color: rgb(0,0,0);
+	  background-color: rgba(0,0,0,0.4);
+	}
+	.modal.fade .modal-dialog {
+	  -webkit-transition: -webkit-transform .3s ease-out;
+	       -o-transition:      -o-transform .3s ease-out;
+	          transition:         transform .3s ease-out;
+	  -webkit-transform: translate(0, -25%);
+	      -ms-transform: translate(0, -25%);
+	       -o-transform: translate(0, -25%);
+	          transform: translate(0, -25%);
+	}
+	.modal-dialog {
+	  position: relative;
+	  width: auto;
+	  margin: 10px;
+	}
+	.modal-content {
+	  position: relative;
+	  background-color: #fff;
+	  -webkit-background-clip: padding-box;
+	          background-clip: padding-box;
+	  
+	  border-radius: 6px;
+	  outline: 0;
+	  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	          box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	}
+	.modal-body {
+	  position: relative;
+	}
+	.loader {
+	    	display:block;	    	
+		  	border: 16px solid #f3f3f3; /* Light grey */
+		  	border-top: 16px solid #3498db; /* Blue */
+		 	border-radius: 50%;
+		  	width: 25px;
+		  	height: 25px;
+		  	animation: spin 2s linear infinite;
+		  	z-index: 9999;  
+            position:absolute;
+		}
+	@keyframes spin {
+	  0% { transform: rotate(0deg); }
+	  100% { transform: rotate(360deg); }
+	}
+
+</style>
+
+<body>
+
+	<!-- Button trigger modal -->
+    <button type="button" id="btn">
+      Loadind...
+    </button>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  		<div class="modal-dialog" role="document">
+		    <div class="modal-content">  
+
+      			<div class="modal-body">
+	    			<div class="loader" id="loader"></div>
+	      		</div><!--modal-body-->
+		      
+		    </div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+</body>
+	<script type="text/javascript">
+		var modal = document.getElementById('myModal');
+		btn.onclick = function () {
+			modal.style.display = 'block';
+		}
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = 'none';
+			}
+		}
+	</script>
+
+</html>

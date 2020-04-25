@@ -1,0 +1,22 @@
+<project info="SuiteCloud IDE generated file, do not edit." setAttributesOnUpdate="false">
+  <folder name="project_one" bundleable="false">
+    <file name="BundleInstallationScript.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="ClientScript_InventoryItem.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="ClientScript_PortletForm.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="Load_sl.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="MapReduceScript_UpdateRecords.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="Portlet_Form.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="Portlet_HTML.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="Portlet_Link.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="Portlet_Search.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="RESTlet_Test.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="Script_HTML.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="Script_Module.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="Script_PlugIn.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="Script_Searches.js" bundleable="true" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="UserEventScript_InventoryItem.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="index_sl.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+    <file name="loadtwo.html" bundleable="false" hideInBundle="false" isOnline="true" textFileEncoding="_utf8"/>
+    <file name="portletApiTestHelper.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+  </folder>
+</project>
