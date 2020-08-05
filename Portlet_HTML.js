@@ -19,7 +19,7 @@ function(html) {
      */
     function render(params) 
     {
-    	params.portlet.title = 'My Portlet Test';
+    	params.portlet.title = 'My Portlet Test NBC-002';
     	var content = html();
     	
     	
