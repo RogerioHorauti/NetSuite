@@ -44,6 +44,72 @@ function() {
     	log.debug({title: 'beforeLoad - Date()', details: new Date()});
     	
 	}
+	
+	 function acceptPaymentForInvoice(invoiceRec, acceptPaymentInfoObj){
+
+		var acceptPaymentType = '';
+		switch(invoiceRec.type){
+		    case 'vendorbill':
+			acceptPaymentType = 'vendorpayment';
+			break;
+		    case 'invoice':
+			acceptPaymentType = 'customerpayment';
+			break;
+		}
+
+		var accptPayment = record.transform({
+			fromType: invoiceRec.type, //record.Type.INVOICE,
+			fromId: invoiceRec.id,
+			toType: acceptPaymentType, //record.Type.CUSTOMER_PAYMENT,
+			isDynamic: true
+		});
+
+		if (acceptPaymentInfoObj.balAccount){
+		    accptPayment.setValue({
+			fieldId: 'account',
+			value: acceptPaymentInfoObj.balAccount    // conta do banco
+		    });
+		}
+
+		accptPayment.setValue({
+			fieldId: 'payment',
+			value: acceptPaymentInfoObj.paymentAmount
+        	});
+
+        	accptPayment.setValue({
+			fieldId: 'trandate',
+			value: format.parse({value: acceptPaymentInfoObj.date, type: format.Type.DATE})
+		});
+
+		var foundLine = false;
+		var lineCount = accptPayment.getLineCount('apply');
+		for (var j = 0; j < lineCount && !foundLine; j++) {
+			accptPayment.selectLine({
+				sublistId: 'apply',
+				line: j
+			});
+
+			var isApply = accptPayment.getCurrentSublistValue({
+				sublistId: 'apply',
+				fieldId: 'apply',
+			});
+
+			if (isApply == true) {
+				accptPayment.setCurrentSublistValue({
+					sublistId: 'apply',
+					fieldId: 'amount',
+					value: acceptPaymentInfoObj.paymentAmount
+				});
+
+				foundLine = true;
+			}
+		}
+
+		var accptPaymentId = accptPayment.save();
+
+		return accptPaymentId;
+    	}
+	
     return {
     	run: run
     };
