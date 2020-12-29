@@ -16,8 +16,15 @@ function() {
      *
      * @since 2015.2
      */
-    function pageInit(scriptContext) {
+    function pageInit(scriptContext) 
+    {
+	/* #region Transform Record*/
+	var vars = {};
+	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+					vars[key] = value;
+				});
 
+	console.log("Params : " + vars["transform"]);
     }
 
     /**
