@@ -1,0 +1,15 @@
+nlapiLoadRecord(nlapiGetRecordType(),nlapiGetRecordId());
+
+require(
+    ['N/record', 'N/currentRecord', 'N/search', 'N/runtime', 'N/email', 'N/url', 'N/xml', 'N/format', 'N/https'],
+    function(r, cr, s, rt, e, u, x, ft, hps){
+        record = r;
+        currentRecord = cr.get();
+        search = s;
+        runtime = rt;
+        email = e;
+        url = u;
+        xml = x;
+        format = ft;
+        https = hps
+});
