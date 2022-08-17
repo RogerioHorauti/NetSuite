@@ -1,0 +1,1226 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+
+<pdf>
+<head>
+<macrolist>
+	
+	<macro id="nlheader">
+
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 1.4cm;">
+
+			<tr>
+				<td colspan="2" rowspan="1" style="width: 14.5cm; height: 0.8cm;">
+					<span style="font-size:9px;">RECEBEMOS DE ${lvTagC.custrecord_mts_companyname_nfetagc} OS PRODUTOS CONSTANTES DA NOTA FISCAL INDICADA AO LADO</span>
+				</td>
+
+				<td colspan="1" rowspan="2" style="width: 4.0cm; height: 1.4cm;" align="center">
+					<table cellpadding="0" cellspacing="0" border="0" style="width: 4.0cm; height: 1.4cm;">
+
+						<tr>
+							<td border="0" style="width: 4.0cm; height: 0.46cm;" align="center">
+								<span style="font-size:12px;"><strong>NF-e</strong></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td border="0" style="width: 4.0cm; height: 0.46cm;" align="center">
+								<span style="font-size:12px;"><strong>${lvTagB.custrecord_mts_fiscaldocnumber_nfetagb}</strong></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td border="0" style="width: 4.0cm; height: 0.46cm;" align="center">
+								<span style="font-size:12px;"><strong>SERIE ${lvTagB.custrecord_mts_fiscaldocseries_nfetagb}</strong></span>
+							</td>
+						</tr>
+
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 4.0cm; height: 0.6cm;">
+					<span style="font-size:9px;">DATA DO RECEBIMENTO</span>
+				</td>
+
+				<td style="width: 10.5cm; height: 0.6cm;">
+					<span style="font-size:9px;">IDENTIFICACAO E ASSINATURA DO RESPONSAVEL</span>
+				</td>
+			</tr>
+
+		</table>
+
+
+
+
+
+
+
+			
+												<table cellpadding="1" cellspacing="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+
+													<tr>
+														<td colspan="1" rowspan="1" border= "0" style="width: 18.5cm; height: 0.3cm;" />
+													</tr>
+
+												</table>
+		
+		
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 3.3cm;">
+
+			<tr>
+				<td colspan="1" rowspan="3" style="width: 3.5cm; height: 3.3cm; border-right-style: none;">
+					<#if subsidiary.logo@url?has_content>
+						<img type="image" src="${subsidiary.logo@url}" alt="logo" width="3.3cm" height="3.3cm"/>
+					</#if>
+				</td>
+
+				<td colspan="1" rowspan="3" style="width: 5.5cm; height: 3.3cm; border-left-style: none;">
+					<span style="font-size:12px;"><strong>Identificacao do emitente</strong></span><br /><span style = "font-size: 9px;">${lvTagC.custrecord_mts_companyname_nfetagc}<br />${lvTagC.custrecord_mts_address_nfetagc}, ${lvTagC.custrecord_mts_number_nfetagc}, ${lvTagC.custrecord_mts_complement_nfetagc}<br />${lvTagC.custrecord_mts_district_nfetagc} - ${lvTagC.custrecord_mts_city_nfetagc} - ${lvTagC.custrecord_mts_state_nfetagc}<br />CEP: ${lvTagC.custrecord_mts_zipcode_nfetagc}<br />TEL: ${lvTagC.custrecord_mts_phone_nfetagc}</span>
+				</td>
+
+				<td colspan="1" rowspan="3" style="width: 2.9cm; height: 3.3cm;" align="center">
+
+					<table cellpadding="0" cellspacing="0" border="0" style="width: 2.7cm; height: 3.2cm;">
+
+						<tr>
+							<td border="0" style="width: 2.7cm; height: 0.34cm;" align="center">
+								<span style="font-size:8px;"><strong>DANFE</strong></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td border="0" style="width: 2.7cm; height: 0.34cm;" align="center">
+								<span style="font-size:8px;">Documento Auxiliar da</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td border="0" style="width: 2.7cm; height: 0.34cm;" align="center">
+								<span style="font-size:8px;">Nota Fiscal Eletronica</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td border="0" style="width: 2.7cm; height: 1cm;" align="center">
+								<table cellpadding="0" cellspacing="0" border="0" style="width: 2.7cm; height: 1cm;">
+									<tr>
+										<td border="0" style="width: 1.7cm; height: 1cm;" align="left" valign="middle">
+											<span style="font-size:8px;">0 - Entrada<br />1 - Saida</span>
+										</td>
+
+										<td border="0" style="width: 1cm; height: 1cm;" align="center" valign="middle">
+											<span style="font-size:8px;">[ ${lvTagB.custrecord_mts_fiscdoctype_nfetagb} ]</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+							<td border="0" style="width: 2.7cm; height: 0.45cm;" align="left"  >
+								<span style="font-size:8px;"><strong>Nº ${lvTagB.custrecord_mts_fiscaldocnumber_nfetagb}</strong></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td border="0" style="width: 2.7cm; height: 0.45cm;" align="left"  >
+								<span style="font-size:8px;"><strong>SERIE ${lvTagB.custrecord_mts_fiscaldocseries_nfetagb}</strong></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td border="0" style="width: 2.7cm; height: 0.38cm;" align="left"  >
+								<span style="font-size:7px;">Pagina <pagenumber/> de <totalpages/></span>
+							</td>
+						</tr>
+
+					</table>
+
+				</td>	
+
+				<td colspan="1" rowspan="1" style="width: 6.6cm; height: 1.5cm;">
+
+					<table cellpadding="0" cellspacing="0" border="0" style="width: 6.5cm; height: 1.4cm;">
+
+						<tr>
+							<td colspan="1" rowspan="1" border="0" style="width: 6.5cm; height: 0.4cm;">
+								<span style="font-size:8px;">CONTROLE DO FISCO</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="1" rowspan="1" border="0" style="width: 6.5cm; height:   1cm;" align="center">
+								<barcode style="width: 6cm; height: 0.75cm;" codetype="code128" showtext="false" value="${lvTagB.custrecord_mts_eletinvacckey_nfetagb}"/>
+							</td>
+						</tr>
+
+					</table>
+
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 6.6cm; height: 0.9cm;">
+					<span style="font-size:8px;">CHAVE DE ACESSO<br />${lvTagB.custrecord_mts_eletinvacckey_nfetagb}</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 6.6cm; height: 0.9cm;">
+					<span style="font-size:8px;">Chave de Acesso da NF-e P/ Consulta de Autencidade no Site<br />WWW.NFE.FAZENDA.GOV.BR</span>
+				</td>
+			</tr>
+
+		</table>
+			
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 1.4cm; border-top-style: none;">
+
+			<tr>
+				<td colspan="2" rowspan="1" style="width: 11.9cm; height: 0.7cm; ">
+					<span style="font-size:8px;">NATUREZA DA OPERACAO<br />${lvTagB.custrecord_mts_operdesc_nfetagb}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 6.6cm;  height: 0.7cm; ">
+					<span style="font-size:8px;">PROTOCOLO DE AUTORIZACAO DE USO<br />${eletrItem.custrecord_mts_protocol_eletiteminvproc}</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 6.1cm; height: 0.7cm;">
+					<span style="font-size:8px;">INSCRICAO ESTADUAL<br />${lvTagC.custrecord_mts_statereg_nfetagc} </span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 5.8cm; height: 0.7cm;">
+					<span style="font-size:8px;">INSC. ESTADUAL DO SUBST. TRIBUTARIO<br />${lvTagC.custrecord_mts_taxsubstatreg_nfetagc} </span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 6.6cm; height: 0.7cm;">
+					<span style="font-size:8px;">CNPJ<br />${lvTagC.custrecord_mts_issfedtax_nfetagc}</span>
+				</td>
+			</tr>
+
+		</table>
+
+												<table cellpadding="1" cellspacing="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+													<tr>
+														<td colspan="1" rowspan="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+															<span style="font-size:8px;"><strong>DESTINATARIO REMETENTE</strong></span>
+														</td>
+													</tr>
+												</table>
+		
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 1.5cm;">
+			
+			<tr>
+				<td colspan="2" rowspan="1" style="width: 13.6cm; height: 0.7cm;">
+					<span style="font-size:8px;">NOME/ RAZAO SOCIAL<br />${lvTagE.custrecord_mts_companyname_nfetage} </span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.2cm; height: 0.7cm;">
+					<span style="font-size:8px;">CNPJ/CPF<br /></span>
+						<#if lvTagE.custrecord_mts_addissfextaxno_nfetage?has_content>
+							<span style="font-size:8px;">${lvTagE.custrecord_mts_addissfextaxno_nfetage}</span>
+						<#else>
+							<span style="font-size:8px;">${lvTagE.custrecord_mts_addsendtaxreg_nfetage}</span>
+						</#if>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.7cm; height: 0.7cm;" align="center">
+
+					<table cellpadding="0" cellspacing="0" border="0" style="width: 2.6cm; height: 0.6cm;">
+
+						<tr>
+							<td colspan="1" rowspan="1" border="0" style="width: 2.6cm; height: 0.3cm;" align="left">
+								<span style="font-size:8px;">DATA DA EMISSAO</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="1" rowspan="1" border="0" style="width: 2.5cm; height: 0.3cm;" align="right">
+								<span style="font-size:8px;">${eletrItem.custrecord_mts_issuidate_eletiteminvproc}</span>
+							</td>
+						</tr>
+
+					</table>
+
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 9.1cm; height: 0.7cm;" >
+					<span style="font-size:8px;">ENDERECO<br />${lvTagE.custrecord_mts_address_nfetage}, ${lvTagE.custrecord_mts_number_nfetage}, ${lvTagE.custrecord_mts_complement_nfetage}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.5cm; height: 0.7cm;" >
+					<span style="font-size:8px;">BAIRRO/DISTRITO<br />${lvTagE.custrecord_mts_district_nfetage} </span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.2cm; height: 0.7cm;" >
+					<span style="font-size:8px;">CEP<br />${lvTagE.custrecord_mts_zipcode_nfetage}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.7cm; height: 0.7cm;" >
+
+					<table cellpadding="0" cellspacing="0" border="0" style="width: 2.6cm; height: 0.6cm;">
+
+						<tr>
+							<td colspan="1" rowspan="1" border="0" style="width: 2.6cm; height: 0.3cm;" align="left">
+								<span style="font-size:8px;">DATA ENTRADA/SAIDA</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="1" rowspan="1" border="0" style="width: 2.5cm; height: 0.3cm;" align="right">
+								<span style="font-size:8px;">${eletrItem.custrecord_mts_exitdate_eletiteminvproc}</span>
+							</td>
+						</tr>
+
+					</table>
+
+				</td>
+			</tr>
+
+		</table>
+			
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 0.7cm; border-top-style: none;">
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 4.5cm; height: 0.7cm;">
+					<span style="font-size:8px;">MUNICIPIO<br />${lvTagE.custrecord_mts_city_nfetage} </span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.8cm; height: 0.7cm;">
+					<span style="font-size:8px;">FONE/FAX<br />${lvTagE.custrecord_mts_phone_nfetage}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 1.7cm; height: 0.7cm;">
+					<span style="font-size:8px;">UF<br />${lvTagE.custrecord_mts_state_nfetage}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 5.8cm; height: 0.7cm;">
+					<span style="font-size:8px;">INSCRICAO ESTADUAL<br />${lvTagE.custrecord_mts_cityreg_nfetage}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.7cm; height: 0.7cm;">
+
+					<table cellpadding="0" cellspacing="0" border="0" style="width: 2.6cm; height: 0.6cm;">
+
+						<tr>
+							<td colspan="1" rowspan="1" border="0" style="width: 2.6cm; height: 0.3cm;" align="left">
+								<span style="font-size:8px;">HORA ENTRADA/SAIDA</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="1" rowspan="1" border="0" style="width: 2.5cm; height: 0.3cm;" align="right">
+								<span style="font-size:8px;">${eletrItem.custrecord_mts_exittime_eletiteminvproc}</span>
+							</td>
+						</tr>
+
+					</table>
+
+				</td>
+			</tr>
+
+		</table>
+		
+												<table cellpadding="1" cellspacing="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+
+													<tr>
+														<td colspan="1" rowspan="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+															<span style="font-size:8px;"><strong>INFORMACAO DO LOCAL DE ENTREGA</strong></span>
+														</td>
+													</tr>
+
+												</table>
+
+        <table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 0.7cm; border-top-style: none;">
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 11.8cm; height: 0.7cm;">
+					<span style="font-size:8px;">NOME/RAZAO SOCIAL<br />${lvTagG.custrecord_mts_namereceiver_nfetagg} </span>
+				</td>
+				<td colspan="1" rowspan="1" style="width:   4cm; height: 0.7cm;">
+					<span style="font-size:8px;">CNPJ/CPF<br />${lvTagG.custrecord_mts_federaltaxnumber_nfetagg} </span>
+				</td>
+				<td colspan="1" rowspan="1" style="width: 2.7cm; height: 0.7cm;">
+					<span style="font-size:7px;">INSCRICAO ESTADUAL<br />${lvTagG.custrecord_mts_inscricaoestadual_nfetagg} </span>
+				</td>
+			</tr>
+        
+        </table>
+
+        <table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 0.7cm; border-top-style: none;">
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 10.3cm; height: 0.7cm;">
+					<span style="font-size:8px;">ENDERECO<br />${lvTagG.custrecord_mts_address_nfetagg} </span>
+				</td>
+				<td colspan="1" rowspan="1" style="width: 5.5cm; height: 0.7cm;">
+					<span style="font-size:8px;">BAIRRO/DISTRITO<br />${lvTagG.custrecord_mts_district_nfetagg} </span>
+				</td>
+				<td colspan="1" rowspan="1" style="width: 2.7cm; height: 0.7cm;">
+					<span style="font-size:8px;">CEP<br />${lvTagG.custrecord_mts_postcode_nfetagg} </span>
+				</td>
+			</tr>
+
+        </table>
+
+        <table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 0.7cm; border-top-style: none;">
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 14.5cm; height: 0.7cm;">
+					<span style="font-size:8px;">MUNICIPIO<br />${lvTagG.custrecord_mts_city_nfetagg} </span>
+				</td>
+				<td colspan="1" rowspan="1" style="width: 1.3cm; height: 0.7cm;">
+					<span style="font-size:8px;">UF<br />${lvTagG.custrecord_mts_state_nfetagg} </span>
+				</td> 
+				<td colspan="1" rowspan="1" style="width: 2.7cm; height: 0.7cm;">
+					<span style="font-size:8px;">FONE/ FAX<br />${lvTagG.custrecord_mts_fone_nfetagg} </span>
+				</td>
+			</tr>
+
+		</table>
+		
+												<table cellpadding="1" cellspacing="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+
+													<tr>
+														<td colspan="1" rowspan="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+															<span style="font-size:8px;"><strong>FATURA</strong></span>
+														</td>
+													</tr>
+
+												</table>
+		
+		<table cellpadding="0" cellspacing="1" style="width: 18.5cm; height: 0.6cm;">
+
+            <#setting locale="pt_BR">
+			
+			<#assign lvTagY = eletrItem.recmachcustrecord_mts_eletronicinvoicen_nfetagy>
+			<#assign ParcelaUm = lvTagY[0]>
+			<#assign ParcelaDois = lvTagY[1]>
+			<#assign ParcelaTres = lvTagY[2]>
+			<#assign ParcelaQuatro = lvTagY[3]>
+			<#assign ParcelaCinco = lvTagY[4]>
+			<#assign ParcelaSeis = lvTagY[5]>
+			<#assign ParcelaSete = lvTagY[6]>
+			<#assign ParcelaOito = lvTagY[7]>
+
+			<tr>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 0.5cm; height: 0.3cm; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaUm.custrecord_mts_quotanumber_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 1.5cm; height: 0.3cm; border-left-style: none; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaUm.custrecord_mts_duedate_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 2.625cm; height: 0.3cm; border-left-style: none;">
+					<span style="font-size:8px;">${ParcelaUm.custrecord_mts_duplicateamount_nfetagy?string[",##0.00"]}</span>
+				</td>
+
+
+				<td colspan="1" rowspan="1" align="center" style="width: 0.5cm; height: 0.3cm; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaTres.custrecord_mts_quotanumber_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 1.5cm; height: 0.3cm; border-left-style: none; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaTres.custrecord_mts_duedate_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 2.625cm; height: 0.3cm; none; border-left-style: none;">
+					<span style="font-size:8px;">${ParcelaTres.custrecord_mts_duplicateamount_nfetagy?string[",##0.00"]}</span>
+				</td>
+
+
+				<td colspan="1" rowspan="1" align="center" style="width: 0.5cm; height: 0.3cm; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaCinco.custrecord_mts_quotanumber_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 1.5cm; height: 0.3cm; border-left-style: none; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaCinco.custrecord_mts_duedate_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 2.625cm; height: 0.3cm; border-left-style: none;">
+					<span style="font-size:8px;">${ParcelaCinco.custrecord_mts_duplicateamount_nfetagy?string[",##0.00"]}</span>
+				</td>
+
+
+				<td colspan="1" rowspan="1" align="center" style="width: 0.5cm; height: 0.3cm; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaSete.custrecord_mts_quotanumber_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 1.5cm; height: 0.3cm; border-left-style: none; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaSete.custrecord_mts_duedate_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 2.625cm; height: 0.3cm; border-left-style: none;">
+					<span style="font-size:8px;">${ParcelaSete.custrecord_mts_duplicateamount_nfetagy?string[",##0.00"]}</span>
+				</td>
+
+			</tr>
+
+			<tr>
+	
+				<td colspan="1" rowspan="1" align="center" style="width: 0.5cm; height: 0.3cm; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaDois.custrecord_mts_quotanumber_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 1.5cm; height: 0.3cm; border-left-style: none; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaDois.custrecord_mts_duedate_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 2.625cm; height: 0.3cm; border-left-style: none;">
+					<span style="font-size:8px;">${ParcelaDois.custrecord_mts_duplicateamount_nfetagy?string[",##0.00"]}</span>
+				</td>
+
+
+				<td colspan="1" rowspan="1" align="center" style="width: 0.5cm; height: 0.3cm; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaQuatro.custrecord_mts_quotanumber_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 1.5cm; height: 0.3cm; border-left-style: none; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaQuatro.custrecord_mts_duedate_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 2.625cm; height: 0.3cm; border-left-style: none;">
+					<span style="font-size:8px;">${ParcelaQuatro.custrecord_mts_duplicateamount_nfetagy?string[",##0.00"]}</span>
+				</td>
+
+
+				<td colspan="1" rowspan="1" align="center" style="width: 0.5cm; height: 0.3cm; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaSeis.custrecord_mts_quotanumber_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 1.5cm; height: 0.3cm; border-left-style: none; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaSeis.custrecord_mts_duedate_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 2.625cm; height: 0.3cm; border-left-style: none;">
+					<span style="font-size:8px;">${ParcelaSeis.custrecord_mts_duplicateamount_nfetagy?string[",##0.00"]}</span>
+				</td>
+
+
+				<td colspan="1" rowspan="1" align="center" style="width: 0.5cm; height: 0.3cm; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaOito.custrecord_mts_quotanumber_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 1.5cm; height: 0.3cm; border-left-style: none; border-right-style: none;">
+					<span style="font-size:8px;">${ParcelaOito.custrecord_mts_duedate_nfetagy}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" align="center" style="width: 2.625cm; height: 0.3cm; border-left-style: none;">
+					<span style="font-size:8px;">${ParcelaOito.custrecord_mts_duplicateamount_nfetagy?string[",##0.00"]}</span>
+				</td>
+
+			</tr>
+
+		</table>
+			
+												<table cellpadding="1" cellspacing="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+
+													<tr>
+														<td colspan="1" rowspan="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+															<span style="font-size:8px;"><strong>CALCULO DO IMPOSTO</strong></span>
+														</td>
+													</tr>
+
+												</table>
+		
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 0.7cm;">
+
+            <#setting locale="pt_BR">
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 3.3cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">BASE DE CALCULO DO ICMS</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.2cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">VALOR DO ICMS</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width:   5cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">BASE DE CALCULO DO ICMS SUBSTITUICAO</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.2cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">VALOR DO ICMS SUBSTITUICAO</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.8cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">VALOR TOTAL DOS PRODUTOS</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 3.3cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_icmscalcbasis_nfetagw?string[",##0.00"]}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.2cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_icmstotalamout_nfetagw?string[",##0.00"]}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width:   5cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_icmsstcalcbasis_nfetagw?string[",##0.00"]}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.2cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_icmssttotalamount_nfetagw?string[",##0.00"]}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.8cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_prodservtotamt_nfetagw?string[",##0.00"]}</span>
+				</td>
+			</tr>
+
+		</table>
+
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 0.7cm; border-top-style: none;">
+
+            <#setting locale="pt_BR">
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 2.7cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">VALOR DO FRETE</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.2cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">VALOR DO SEGURO</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.1cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">DESCONTO</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.5cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:7px;">OUTRAS DESPESAS ACESSERIAS</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.2cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">VALOR DO IPI</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.8cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">VALOR TOTAL DA NOTA</span>
+				</td>			
+			</tr>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 2.7cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_transptotamount_nfetagw?string[",##0.00"]}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.2cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_insurtotalamount_nfetagw?string[",##0.00"]}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.1cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_discountotamount_nfetagw?string[",##0.00"]}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.5cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_otherexpenses_nfetagw?string[",##0.00"]}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.2cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_ipitotalamount_nfetagw?string[",##0.00"]}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.8cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagW.custrecord_mts_eletinvtotamount_nfetagw?string[",##0.00"]}</span>
+				</td>
+			</tr>
+
+		</table>
+		
+												<table cellpadding="1" cellspacing="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+
+													<tr>
+														<td colspan="1" rowspan="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+															<span style="font-size:8px;"><strong>TRANSPORTADOR VOLUMES TRANSPORTADOS</strong></span>
+														</td>
+													</tr>
+
+												</table>
+		
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 0.7cm;"> 
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 7.7cm; height: 0.7cm;">
+					<span style="font-size:8px;">RAZAO SOCIAL<br />${lvTagX.custrecord_mts_companyname_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.7cm; height: 0.7cm;">
+					<span style="font-size:8px;">FRETE POR CONTA<br /></span>
+					<#if lvTagX.custrecord_mts_transpmode_nfetagx == "0">
+						<span style="font-size:8px;">0 - Emitente</span>
+					<#elseif lvTagX.custrecord_mts_transpmode_nfetagx == "1">
+						<span style="font-size:8px;">1 - Destinatario</span>
+					<#elseif lvTagX.custrecord_mts_transpmode_nfetagx == "2">
+						<span style="font-size:8px;">2 - Terceiros</span>
+					<#elseif lvTagX.custrecord_mts_transpmode_nfetagx == "3">
+						<span style="font-size:7px;">3 - Transporte proprio Remetente</span>
+					<#elseif lvTagX.custrecord_mts_transpmode_nfetagx == "4">
+						<span style="font-size:6px;">4 - Transporte proprio Destinatario</span>
+					<#elseif lvTagX.custrecord_mts_transpmode_nfetagx == "9">
+						<span style="font-size:8px;">9 - Sem Frete</span>
+					</#if>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width:   2cm; height: 0.7cm;">
+					<span style="font-size:8px;">CODIGO ANTT<br />${lvTagX.custrecord_mts_anttvehicle_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.6cm; height: 0.7cm;">
+					<span style="font-size:8px;">PLACA DO VEICULO<br />${lvTagX.custrecord_mts_vehicleid_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 1.2cm; height: 0.7cm;">
+					<span style="font-size:8px;">UF<br />${lvTagX.custrecord_mts_vehicleidstate_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.3cm; height: 0.7cm;">
+					<span style="font-size:8px;">CNPJ/CPF<br />${lvTagX.custrecord_mts_federaltaxnumber_nfetagx}</span>
+				</td>
+			</tr>
+
+		</table>
+
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 0.7cm;">
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 7.7cm; height: 0.7cm;">
+					<span style="font-size:8px;">ENDERECO</span><br /><span style="font-size:8px;">${lvTagX.custrecord_mts_address_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width:   6cm; height: 0.7cm;">
+					<span style="font-size:8px;">MUNICIPIO</span><br /><span style="font-size:8px;">${lvTagX.custrecord_mts_city_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 1.3cm; height: 0.7cm;">
+					<span style="font-size:8px;">UF</span><br /><span style="font-size:8px;">${lvTagX.custrecord_mts_state_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.5cm; height: 0.7cm;">
+					<span style="font-size:8px;">INSCRICAO ESTADUAL</span><br /><span style="font-size:8px;">${lvTagX.custrecord_mts_stateregistry_nfetagx}</span>
+				</td>
+			</tr>
+
+		</table>
+
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 0.7cm; border-top-style: none;">
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width:   3cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">QUANTIDADE</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.9cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">ESPECIE</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width:   3cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">MARCA</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.2cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">NUMERACAO</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.2cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">PESO BRUTO</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.2cm; height: 0.35cm; border-bottom-style: none;">
+					<span style="font-size:8px;">PESO LIQUIDO</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width:   3cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagX.custrecord_mts_piecesquantity_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 2.9cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagX.custrecord_mts_piecestype_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width:   3cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagX.custrecord_mts_piecesbrand_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.2cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagX.custrecord_mts_piecesnumber_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.2cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagX.custrecord_mts_grossweight_nfetagx}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 3.2cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagX.custrecord_mts_netweight_nfetagx}</span>
+				</td>
+			</tr>
+
+		</table>
+
+			<table style="width: 18.5cm; height: 0.5cm;" border="0">
+
+				<tr>
+					<td colspan="16" rowspan="1" border= "0" style="width: 18.5cm; height: 0.5cm;" />
+				</tr>
+
+			</table>
+
+	</macro>
+
+	<macro id="nlfooter">
+
+												<table cellpadding="1" cellspacing="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+
+													<tr>
+														<td colspan="1" rowspan="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+															<span style="font-size:8px;"><strong>CALCULO DO ISSQN</strong></span>
+														</td>
+													</tr>
+
+												</table>
+		
+		<table cellpadding="1" cellspacing="1" style="width: 18.5cm; height: 0.7cm;">
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 4.625cm; height: 0.35cm; border-bottom-style: none;" align="right">
+					<span style="font-size:8px;">INSCRICAO MUNICIPAL</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.625cm; height: 0.35cm; border-bottom-style: none;" align="right">
+					<span style="font-size:8px;">VALOR TOTAL DOS SERVICOS</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.625cm; height: 0.35cm; border-bottom-style: none;" align="right">
+					<span style="font-size:8px;">BASE DE CALCULO DO ISSQN</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.625cm; height: 0.35cm; border-bottom-style: none;" align="right">
+					<span style="font-size:8px;">VALOR DO ISSQN</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 4.625cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagU.custrecord_mts_sourcecitycode_nfetagu}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.625cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagU.custrecord_mts_calcbasis_nfetagu}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.625cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagU.custrecord_mts_calcbasis_nfetagu}</span>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 4.625cm; height: 0.35cm; border-top-style: none;" align="right">
+					<span style="font-size:8px;">${lvTagU.custrecord_mts_issqnamount_nfetagu}</span>
+				</td>
+			</tr>
+
+		</table>
+		
+												<table cellpadding="1" cellspacing="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+
+													<tr>
+														<td colspan="1" rowspan="1" border= "0" style="width: 9.25cm; height: 0.3cm;">
+															<span style="font-size:8px;"><strong>DADOS ADICIONAIS</strong></span>
+														</td>
+
+														<td colspan="1" rowspan="1" border= "0" style="width: 9.25cm; height: 0.3cm;">
+															<span style="font-size:8px;"><strong>RESERVADO AO FISCO</strong></span>
+														</td>
+													</tr>
+
+												</table>
+		
+		<table cellpadding="3" cellspacing="1" style="width: 18.5cm; height: 2.4cm;">
+
+			<#if lvTagG.custrecord_mts_address_nfetagg?has_content>
+				<#assign a = "ENDERECO DE ENTREGA: " + lvTagG.custrecord_mts_address_nfetagg + ", ">
+			<#else>
+				<#assign a = "">
+			</#if>
+
+			<#if lvTagG.custrecord_mts_number_nfetagg?has_content>
+				<#assign b =  lvTagG.custrecord_mts_number_nfetagg + ", ">
+			<#else>
+				<#assign b = "">
+			</#if>
+
+			<#if lvTagG.custrecord_mts_complement_nfetagg?has_content>
+				<#assign c = lvTagG.custrecord_mts_complement_nfetagg + ", ">
+			<#else>
+				<#assign c = "">
+			</#if>
+
+			<#if lvTagG.custrecord_mts_district_nfetagg?has_content>
+				<#assign d = lvTagG.custrecord_mts_district_nfetagg + ", ">
+			<#else>
+				<#assign d = "">
+			</#if>
+
+			<#if lvTagG.custrecord_mts_postcode_nfetagg?has_content>
+				<#assign e = lvTagG.custrecord_mts_postcode_nfetagg + ", ">
+			<#else>
+				<#assign e = "">
+			</#if>
+
+			<#if lvTagG.custrecord_mts_citycode_nfetagg?has_content>
+				<#assign f = lvTagG.custrecord_mts_citycode_nfetagg + ", ">
+			<#else>
+				<#assign f = "">
+			</#if>
+
+			<#if lvTagG.custrecord_mts_city_nfetagg?has_content>
+				<#assign g = lvTagG.custrecord_mts_city_nfetagg + ", ">
+			<#else>
+				<#assign g = "">
+			</#if>
+
+			<#if lvTagG.custrecord_mts_state_nfetagg?has_content>
+				<#assign h = lvTagG.custrecord_mts_state_nfetagg + ". ">
+			<#else>
+				<#assign h = "">
+			</#if>
+
+
+			<#if lvTagG.custrecord_mts_postcode_nfetagg != lvTagE.custrecord_mts_zipcode_nfetage && lvTagG.custrecord_mts_city_nfetagg != lvTagE.custrecord_mts_city_nfetage && lvTagG.custrecord_mts_district_nfetagg != lvTagE.custrecord_mts_district_nfetage>
+				<#assign tagGTexts = a + b + c + d + e + f + g + h>
+			<#else>
+				<#assign tagGTexts = "">
+			</#if>
+
+            <#assign textResult = "">
+
+            <#list eletrItem.recmachcustrecord_mts_eletinvno_nfetagz as lvTagZ>
+
+                <#assign textResult = textResult + " " +lvTagZ.custrecord_mts_contributtoraddin_nfetagz>
+
+            </#list>
+
+			<#assign textResult = textResult + " " + tagGTexts>
+
+			<#assign textResultLength = textResult?length>
+
+			<tr>
+				<td colspan="1" rowspan="1" style="width: 9.5cm; height: 2.4cm;">
+					<#if (textResultLength > 710)>
+						<span style="font-size:8px;">${textResult[0..709]}</span>
+					<#else>
+						<span style="font-size:8px;">${textResult}</span>
+					</#if>
+				</td>
+
+				<td colspan="1" rowspan="1" style="width: 9.5cm; height: 2.4cm;" />
+			</tr>
+
+		</table>
+
+	</macro>
+
+</macrolist>
+
+<style>
+
+table{
+	border: 0.03px solid black;
+}
+
+td{
+	border: 0.03px solid black;
+}
+
+th{
+	border: 0.03px solid black;
+}
+
+</style>
+
+</head>
+
+<body <#if waterMark.imageLink?string?has_content> 
+            background-image="${waterMark.imageLink?html}" background-position="center middle" 
+      </#if>
+header="nlheader" header-height="16.7cm" footer="nlfooter" footer-height="3.7cm" padding="0.5in 0.5in 0.04in 0.5in">
+
+		<table cellpadding="1" cellspacing="1" border="0" style="width: 18.5cm; height: 1.1cm;">
+
+			<thead>
+
+				<tr>
+					<th colspan="16" rowspan="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+						<span style="font-size:8px;"><strong>DADOS DO PRODUTO/SERVICO</strong></span>
+					</th>
+				</tr>
+												
+				<tr>
+					<th colspan="1" rowspan="1" align="center" style=" width: 1.6cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>COD. PROD</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 3.3cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>DESCRICAO DO PRODUTO/SERVICO</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 0.9cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>NCM/SH</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 0.6cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>CST</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 0.6cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>CFOP</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 1cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>UNID.</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 1.1cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>QTD.</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>V.UNITARIO</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 0.6cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>%DESC</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>V.DESC</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>V.TOTAL</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>BC ICMS</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>V.ICMS</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>V.IPI</strong></span>
+					</th>
+
+                    <th colspan="2" rowspan="1" align="center" style=" width: 1.2cm; height: 0.4cm; vertical-align: middle;">
+                        <table cellpadding="1" cellspacing="0" border= "0" style="width: 1.2cm; height: 0.4cm;">
+                            <tr>
+                                <td align="center" colspan="2" rowspan="1" style="width: 1.2cm; height:0.2cm; vertical-align: middle; border-top-style: none; border-right-style: none; border-left-style: none;">
+                                    <span  style="font-size:5px;"><strong>ALIQ</strong></span>
+                                </td>
+                            </tr>   
+                            <tr>
+                                <td align="center" colspan="1" rowspan="1" style="width: 0.6cm; height:0.2cm; vertical-align: middle; border-bottom-style: none;  border-left-style: none;">
+                                    <span  style="font-size:5px;"><strong>ICMS</strong></span>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1" style="width: 0.6cm; height:0.2cm; vertical-align: middle; border-bottom-style: none; border-right-style: none;">
+                                    <span  style="font-size:5px;"><strong>IPI</strong></span>
+                                </td>
+                            </tr>                             
+                        </table>                               
+					</th>
+
+					<!-- <th colspan="1" rowspan="1" align="center" style=" width: 0.9cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>ALIQ.ICMS</strong></span>
+					</th>
+
+					<th colspan="1" rowspan="1" align="center" style=" width: 0.7cm; height: 0.4cm; vertical-align: middle;">
+						<span style="font-size:5px;"><strong>ALIQ.IPI</strong></span>
+					</th> -->
+				</tr>
+
+			</thead>
+			 
+			<tbody>
+
+                <#setting locale="pt_BR">
+
+                <#list eletrItem.recmachcustrecord_mts_eletinvno_nfetagi as lvTagI>
+                    
+                    <tr>
+                        <td colspan="1" rowspan="1" align="center" style=" width: 1.6cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_servprodcode_nfetagi}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="left" style=" width: 3.3cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_description_nfetagi}<br />${lvTagV.productAdditionalInformation[lvTagI?index]}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 0.9cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_ncmcode_nfetagi}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 0.6cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_cstcode_nfetagi}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 0.6cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_cfop_nfetagi}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 1cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_unitcode_nfetagi}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 1.1cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_quantity_nfetagi}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_unitvalue_nfetagi?string[",##0.00"]}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 0.6cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:6px;">${lvTagI.custrecord_mts_discounttotalperc_nfetagi}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_discountotal_nfetagi?string[",##0.00"]}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_grossamount_nfetagi?string[",##0.00"]}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_toticmscalcbasis_nfetagi?string[",##0.00"]}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_toticmsamount_nfetagi?string[",##0.00"]}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 1.3cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:7px;">${lvTagI.custrecord_mts_totipiamount_nfetagi?string[",##0.00"]}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 0.6cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:6px;">${lvTagI.custrecord_mts_totpercenticms_nfetagi}</span>
+                        </td>
+
+                        <td colspan="1" rowspan="1" align="center" style=" width: 0.6cm; height: 0.4cm; vertical-align: middle;">
+                            <span style="font-size:6px;">${lvTagI.custrecord_mts_totpercentipi_nfetagi}</span>
+                        </td>
+                    </tr>
+
+                </#list>
+
+			</tbody>
+
+		</table>
+
+		<#assign EleItY = eletrItem.recmachcustrecord_mts_eletronicinvoicen_nfetagy>
+		<#if (EleItY?size > 8)>
+
+			<p style="page-break-before: always" />
+
+            <#setting locale="pt_BR">
+
+			<table cellpadding="1" cellspacing="1" border="0" style="width: 18.5cm; height: 0.9cm;">
+
+				<thead>
+
+					<tr>
+						<th colspan="3" rowspan="1" border= "0" style="width: 18.5cm; height: 0.3cm;" />
+					</tr>
+
+					<tr>
+						<th colspan="1" rowspan="1" style="width: 2cm; height: 0.3cm; vertical-align: middle;" align="center">
+							<span style="font-size:6px;"><strong>FATURA</strong></span>
+						</th>
+
+						<th colspan="1" rowspan="1" style="width: 6cm; height: 0.3cm; vertical-align: middle;" align="center">
+							<span style="font-size:6px;"><strong>VENC. FATURA</strong></span>
+						</th>
+
+						<th colspan="1" rowspan="1" style="width: 10.5cm; height: 0.3cm; vertical-align: middle;" align="center">
+							<span style="font-size:6px;"><strong>VALOR</strong></span>
+						</th>
+					</tr>
+
+				</thead>
+
+				<tbody>
+
+					<#list EleItY[8..EleItY?size - 1] as lvTagY>
+
+						<tr>
+							<td colspan="1" rowspan="1" style="width: 2cm; height: 0.3cm; vertical-align: middle;" align="center">
+								<span style="font-size:6px;">${lvTagY.custrecord_mts_quotanumber_nfetagy}</span>
+							</td>
+
+							<td colspan="1" rowspan="1" style="width: 6cm; height: 0.3cm; vertical-align: middle;" align="center">
+								<span style="font-size:6px;">${lvTagY.custrecord_mts_duedate_nfetagy}</span>
+							</td>
+
+							<td colspan="1" rowspan="1" style="width: 10.5cm; height: 0.3cm; vertical-align: middle;" align="center">
+								<span style="font-size:6px;">${lvTagY.custrecord_mts_duplicateamount_nfetagy?string[",##0.00"]}</span>
+							</td>
+						</tr>
+
+					</#list>
+
+					
+				</tbody>
+
+			</table>
+
+		</#if>
+
+		<#if (textResultLength > 710)>
+
+			<p style="page-break-before: always" />
+
+			<table cellpadding="1" cellspacing="1" border="0" style="width: 18.5cm; height: 1.385cm;">
+
+				<thead>
+
+					<tr>
+						<th colspan="1" rowspan="1" border= "0" style="width: 18.5cm; height: 0.085cm;" />
+					</tr>
+
+					<tr>
+						<th colspan="1" rowspan="1" border= "0" style="width: 18.5cm; height: 0.3cm;">
+							<span style="font-size:8px;"><strong>CONTINUACAO DOS DADOS ADICIONAIS</strong></span>
+						</th>
+					</tr>
+
+				</thead>
+
+				<tbody>
+
+					<tr>
+
+						<td colspan="1" rowspan="1" style="width: 18.5cm; height: 1cm;">
+							<span style="font-size:8px;">${textResult[710..textResultLength - 1]}</span>
+						</td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+
+		</#if>
+
+</body>
+
+</pdf>
