@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+	<head>
+		<style type="text/css">
+			table {
+				font-family: sans-serif;
+				font-size: 9pt;
+            	table-layout: fixed;
+            	
+        	}
+        	 th {
+	            font-weight: bold;
+	            vertical-align: middle;
+	            padding: 5px 6px 3px;
+	            background-color: #e3e3e3;
+	            color: #333333;
+	        }
+	        td {
+	            padding: 4px 6px;
+	        }
+	       
+    	</style>
+	</head>
+	<body>
+	
+	<table style="width: 100%;">
+		<#list recElectrInvProcess.recmachcustrecord_mts_eleinvno_nfetagc as nfetagc>
+			<tr><td align="center">CNPJ: ${nfetagc.custrecord_mts_issfedtax_nfetagc} <span style="font-weight: bold;">${nfetagc.custrecord_mts_companyname_nfetagc}</span></td></tr>	
+			<tr><td align="center">${nfetagc.custrecord_mts_address_nfetagc}, ${nfetagc.custrecord_mts_number_nfetagc}, ${nfetagc.custrecord_mts_city_nfetagc}</td></tr>
+			<tr><td align="center">Documento Auxiliar da Nota Fiscal de Consumidor Eletrônica</td></tr>
+		</#list>		
+	</table>
+	
+	<br/>
+	<table class="itemtable" style="width: 100%;">
+		<tr style="">
+			<th align="center">Código</th>
+			<th align="center">Descrição</th>
+			<th align="center">Qtde UN</th>
+			<th align="center">Vl Unit</th>
+			<th align="center">Vl Total</th>
+		</tr>
+		<#list recElectrInvProcess.recmachcustrecord_mts_eletinvno_nfetagi as nfetagi>
+		
+			<tr style="">
+				<td align="center">${nfetagi.custrecord_mts_lineno_nfetagi}</td>
+				<td align="center">${nfetagi.custrecord_mts_description_nfetagi}</td>
+				<td align="center">${nfetagi.custrecord_mts_quantity_nfetagi}</td>
+				<td align="center">${nfetagi.custrecord_mts_taxunitvalue_nfetagi}</td>
+				<td align="center">${nfetagi.custrecord_mts_grossamount_nfetagi}</td>
+			</tr>
+		</#list>
+	</table>
+	<br/>
+	<table style="width: 100%;">
+		<#list recElectrInvProcess.recmachcustrecord_mts_eletinvno_nfetagw as nfetagw>
+			<tr style="">
+				<td>Valor total R$</td>
+				<td align="right">${nfetagw.custrecord_mts_prodservtotamt_nfetagw}</td>
+			</tr>
+			<tr style="">
+				<td>Desconto R$</td>
+				<td align="right">${nfetagw.custrecord_mts_discountotamount_nfetagw}</td>
+			</tr>
+			<tr style="font-weight: bold;">
+				<td>Valor a Pagar R$</td>
+				<td align="right">${nfetagw.custrecord_mts_eletinvtotamount_nfetagw}</td>
+			</tr>
+		</#list>
+		
+		<tr style=""><td></td></tr>
+		<tr style="">
+			<td style="font-weight: bold;">FORMA DE PAGAMENTO</td>
+			<td style="font-weight: bold;" align="right">VALOR PAGO R$</td>
+		</tr>
+		
+		<#list recElectrInvProcess.recmachcustrecord_mts_eletrinvno_nfetagya as nfetagya>
+			<tr style="">
+				<td>${nfetagya.custrecord_mts_paymentmethoname_nfetagya}</td>
+				<td align="right">${nfetagya.custrecord_mts_paymentamount_nfetagya}</td>
+			</tr>
+		</#list>
+		
+		<#if obj.change != 0>
+			<tr style=""><td></td></tr>
+			<tr style="">
+				<td>Troco</td>
+				<td align="right"><span>$</span>${obj.change}</td>
+			</tr>
+		</#if>
+	</table>
+	
+	<br/>
+	
+	<table style="width: 100%;">
+		<tr style="font-weight: bold;">
+			<td align="center">Consulte pela Chave de Acesso em</td>
+		</tr>
+		<tr><td align="center">${recElectrInvProcess.custrecord_urlchave_sefaz_eletrproc}</td></tr>
+		<tr><td align="center">${recElectrInvProcess.custrecord_mts_nfekeyace_eletiteminvproc}</td></tr>
+		
+		<#list recElectrInvProcess.recmachcustrecord_mts_eletronicinvno_nfetage as nfetage>
+			<#if nfetage.custrecord_mts_addissfextaxno_nfetage?has_content || nfetage.custrecord_mts_addsendtaxreg_nfetage?has_content || nfetage.custrecord_mts_numofpasslegaldoc_nfetage?has_content> 
+				<tr>
+					<td align="center">
+						<span ><span style="font-weight: bold;">CONSUMIDOR</span>  
+							
+							<#if nfetage.custrecord_mts_addissfextaxno_nfetage?has_content>CPF ${nfetage.custrecord_mts_addissfextaxno_nfetage}</#if>
+							<#if nfetage.custrecord_mts_addsendtaxreg_nfetage?has_content>CPF ${nfetage.custrecord_mts_addsendtaxreg_nfetage}</#if>
+							<#if nfetage.custrecord_mts_numofpasslegaldoc_nfetage?has_content>CPF ${nfetage.custrecord_mts_numofpasslegaldoc_nfetage}</#if>
+						
+						</span> 
+						- ${nfetage.custrecord_mts_companyname_nfetage} - ${nfetage.custrecord_mts_address_nfetage}, ${nfetage.custrecord_mts_number_nfetage},  ${nfetage.custrecord_mts_city_nfetage}
+					</td>
+				</tr>
+			<#else>
+				<tr>
+					<td align="center">
+						<span style="font-weight: bold;">CONSUMIDOR NÃO IDENTIFICADO</span>
+					</td>
+				</tr>
+			</#if>
+		</#list>
+		
+		<tr style="font-weight: bold;">
+			<td align="center">
+				NFc-e n° ${recElectrInvProcess.id} 
+				Série ${recElectrInvProcess.custrecord_mts_series_eletiteminvproc} 
+				Data ${recElectrInvProcess.custrecord_mts_issuidate_eletiteminvproc} 
+				Hora ${recElectrInvProcess.custrecord_mts_issuitime_eletiteminvproc} 
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<span style="font-weight: bold;">Protocolo de autorização:</span> ${recElectrInvProcess.custrecord_mts_protocol_eletiteminvproc}
+			</td>
+		</tr>
+		
+		<#list recElectrInvProcess.recmachcustrecord_mts_eletinvno_nfetagw as nfetagw>
+			<#assign taxesTotalPrice = nfetagw.custrecord_mts_taxestotalprice_nfetagw>
+		</#list>
+		
+		<#if (taxesTotalPrice > 0)>		
+			<tr><td align="center">Tributos Totais Incidentes (Lei Federal 12.741/2012) ${taxesTotalPrice}</td></tr>
+		</#if>
+			
+		<tr>
+			<td align="center">
+				<#if recElectrInvProcess.custrecord_mts_qrcode_eletiteminvproc?has_content>
+					<img width="150px" height="150px" src="${recElectrInvProcess.custrecord_mts_qrcode_eletiteminvproc@url}"/>
+				</#if>
+			</td>
+		</tr>
+	</table>
+	
+	</body>
+</pdf>
