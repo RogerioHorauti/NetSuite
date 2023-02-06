@@ -1,0 +1,34 @@
+/**
+ * @NApiVersion 2.x
+ * @NModuleScope Public
+ * @author Jose Freire Neto <jose.freire@oxygen.systems>
+ * @INPI/CPRC: BR 51 2017 001268-7
+ * @Copyright OXYGEN SYSTEMS LTDA 2017-2018
+ */
+require(['SuiteBundles/Bundle 334878/src/SuiteScripts2.0/Parcelamento/ScriptsType/Lib/_sit_parcela_lib', 'N/record'], function(objParcela, record) {
+   
+    var transactionArr = [{id:12522, type:"invoice"}]
+		
+		transactionArr.forEach(function (transaction) {
+			
+			try {
+				
+				log.debug("Início Processo Transação " + transaction.id)
+				
+				var rcd = record.load({type: transaction.type, id: transaction.id})
+
+				var objParcelaParameters = objParcela.getParameters({ transactionId: transaction.id, record: rcd });
+
+				var arrParcelas = objParcela.geraParcelas({ transactionId: transaction.id, cnab: false, parameters: objParcelaParameters });
+
+				log.debug('Parcelas: ' + JSON.stringify(arrParcelas))
+				
+				log.debug("Fim Processo Transação " + transaction.id)
+
+			}catch(error){
+				
+				log.debug("Erro ao gerar o parcelamento: ", error)
+				
+			}
+		})
+});
